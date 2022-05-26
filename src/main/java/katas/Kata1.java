@@ -18,7 +18,9 @@ public class Kata1 {
     public static List<Map> execute() {
         List<Movie> movies = DataUtil.getMovies();
 
-        return ImmutableList.copyOf(movies.stream().map(movie -> {return ImmutableMap.of("id", movie.getId(), "title", movie.getTitle());}).collect(Collectors.toUnmodifiableList()));
+        return ImmutableList.copyOf(movies.stream()
+                .map(movie -> {return ImmutableMap.of("id", movie.getId(), "title", movie.getTitle());})
+                .collect(Collectors.toUnmodifiableList()));
     }
 }
 
