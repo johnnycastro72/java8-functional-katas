@@ -18,13 +18,7 @@ import java.util.Map;
 public class Kata5 {
     public static Double execute() {
         List<Movie> movies = DataUtil.getMovies();
-        System.out.println(movies.stream().map(movie -> movie.getRating())
-                .reduce((rating1, rating2) -> rating1 > rating2 ? rating1 : rating2));
-        return 3.0;
-    }
-
-    public static void main(String[] args) {
-        Kata5 kata = new Kata5();
-        kata.execute();
+        return movies.stream().map(movie -> movie.getRating())
+                .reduce(0.0, (rating1, rating2) -> rating1 > rating2 ? rating1 : rating2);
     }
 }
