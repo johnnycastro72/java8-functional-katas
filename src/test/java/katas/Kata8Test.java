@@ -10,6 +10,6 @@ public class Kata8Test {
 
     @Test
     public void testExecute() {
-        Assert.assertThat(Kata8.execute(), equalTo(3));
+        Assert.assertThat(Kata8.execute().size(), equalTo(3));
     }
 }
