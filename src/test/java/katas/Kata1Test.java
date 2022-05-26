@@ -11,6 +11,7 @@ public class Kata1Test {
 
     @Test
     public void testExecute() {
+
         Assert.assertThat(Kata1.execute().size(), equalTo(4));
     }
 }
